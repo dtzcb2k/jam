@@ -1,0 +1,61 @@
+from tkinter import*
+tk = Tk()
+tk.title('window')
+tk.geometry('1920x1080')
+def questionl1():
+    tk.destroy()
+    import question1
+    question1
+def questionl2():
+    tk.destroy()
+    import question2
+    question2
+def questionl3():
+    tk.destroy()
+    import question3
+    question3
+def open1():
+    print("a")
+canvas = Canvas(tk,width=1920,height=1080)
+canvas.pack(side=TOP)
+canvas.create_rectangle(1920,0,0,90,fill='#468bcc') #(右上角,左下角)
+canvas.config(highlightthickness=0)
+canvas.create_rectangle(120,36,20,120,fill='#808080')
+canvas.create_text(70, 62, text='One',fill = '#ffffff', font=('Arial', 25))
+canvas.create_text(70, 92, text='Judge',fill = '#ffffff', font=('Arial', 25))
+canvas.create_text(210, 45, text='Problems',fill = '#ffffff', font=('Arial', 20))
+canvas.create_text(370, 45, text='Submissions',fill = '#ffffff', font=('Arial', 20))
+canvas.create_text(505, 45, text='Rank',fill = '#ffffff', font=('Arial', 20))
+canvas.create_text(600, 45, text='Forum',fill = '#ffffff', font=('Arial', 20))
+canvas.create_text(710, 45, text='Contest',fill = '#ffffff', font=('Arial', 20))
+canvas.create_text(1300, 45, text='Login',fill = '#ffffff', font=('Arial', 20))
+canvas.create_text(1410, 45, text='Register',fill = '#ffffff', font=('Arial', 20))
+photo1 = PhotoImage(file='pange(1).gif')
+photoL1 = Label(tk,image = photo1)
+photoL1.place(x = 800 , y = 25)
+photo2 = PhotoImage(file='pange(2).gif')
+photoL2 = Label(tk,image = photo2,bg = '#468bcc')
+photoL2.place(x = 1480 , y = 18)
+canvas.create_text(300, 150, text='An Online Judge System For Begneers', font=('Arial', 20))
+canvas.create_text(118, 190, text='AC: Accept.', font=('Arial', 15))
+canvas.create_text(301, 230, text='NA: Not Accepted. Some test cases were not currect.', font=('Arial', 15))
+canvas.create_text(332, 270, text='WA: Wrong Answer with the line number and current answer.', font=('Arial', 15))
+canvas.create_text(332, 310, text='WA: Wrong Answer with the line number and current answer.', font=('Arial', 15))
+canvas.create_text(332, 350, text='WA: Wrong Answer with the line number and current answer.', font=('Arial', 15))
+canvas.create_text(332, 390, text='WA: Wrong Answer with the line number and current answer.', font=('Arial', 15))
+canvas.create_text(173, 430, text='TLE: Time Limit Exceed.', font=('Arial', 15))
+canvas.create_text(173, 470, text='TLE: Time Limit Exceed.', font=('Arial', 15))
+canvas.create_text(173, 510, text='TLE: Time Limit Exceed.', font=('Arial', 15))
+canvas.create_text(173, 550, text='TLE: Time Limit Exceed.', font=('Arial', 15))
+canvas.create_text(945, 230, text='問題一:燕巢誰最帥', font=('Arial', 20))
+bt_1 = Button(tk, text='Join Contest', bg='#2cba1d', fg='white', font=('Arial', 15),command = questionl1)
+bt_1.place(x = 830 , y = 260)
+canvas.create_text(985, 405, text='問題二:明天下雨機率多少', font=('Arial', 20))
+bt_2 = Button(tk, text='Join Contest', bg='#2cba1d', fg='white', font=('Arial', 15),command = questionl2)
+bt_2.place(x = 830 , y = 435)
+canvas.create_text(972, 580, text='問題三:天上有幾顆星星', font=('Arial', 20))
+bt_3 = Button(tk, text='Join Contest', bg='#2cba1d', fg='white', font=('Arial', 15),command = questionl3)
+bt_3.place(x = 830 , y = 610)
+canvas.create_text(212, 700, text='We use "python"', font=('Arial', 30))
+canvas.create_line(800, 630, 50, 630, fill='#808080')
+tk.mainloop()
